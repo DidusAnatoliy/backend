@@ -1,4 +1,0 @@
-const loggerOne = (request, response, next) => {
-    console.log("Log 1");
-  };
-  module.exports = loggerOne;
