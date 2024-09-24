@@ -1,5 +1,5 @@
-const originalUrl = (request, response, next) => {
+const logger = (request, response, next) => {
     console.log(request.url);
     next();
   };
-  module.exports = originalUrl;
+  module.exports = logger;

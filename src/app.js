@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 const userRouter = require("./routes/urers");
 const bookRouter = require("./routes/books");
 const notFound = require("./middlewares/notFound");
-const originalUrl = require("./middlewares/originalUrl");
+const logger = require("./middlewares/originalUrl");
 
 const app = express();
 
@@ -24,7 +24,7 @@ mongoose
 
 app.use(cors());
 app.use(bodyparser.json());
-app.use(originalUrl);
+app.use(logger);
 app.use(userRouter);
 app.use(bookRouter);
 app.use(notFound);
